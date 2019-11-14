@@ -40,8 +40,10 @@ export const loginUser = (mailLogin,passwordLogin) => {
 function observer(){
     firebase.auth().onAuthStateChanged(function(user) {
         if(user){
-            console.log("Existe Usuario Activo");
+        
+            //console.log("Existe Usuario Activo");
             let displayName = user.displayName;
+            console.log(displayName);
             let email = user.email;
             console.log(email);
             let emailVerified = user.emailVerified;
@@ -49,6 +51,7 @@ function observer(){
             let photoURL = user.photoURL;
             let isAnonymous = user.isAnonymous;
             let uid = user.uid;
+            console.log(uid);
             let providerData = user.providerData;
         }  
         else{

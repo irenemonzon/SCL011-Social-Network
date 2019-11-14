@@ -67,10 +67,10 @@ export const editpost=(id,index)=>{
     btnedit.innerHTML='Guardar';
 
     btnedit.addEventListener ("click",()=>{
+    
         let restaurantRef = database.collection("restaurantes").doc(id);
         // Set the "capital" field of the city 'DC'
         let post2=document.getElementById("escrito").value;
-
         return restaurantRef.update({
             post:post2
         })
@@ -78,7 +78,8 @@ export const editpost=(id,index)=>{
         .then(function() {
             console.log("Document successfully updated!");
             btnedit.innerHTML='Editar';
-            document.getElementById("escrito").value="";
+           document.getElementById("escrito").value="";
+           btnpost(id,index);
         })
         .catch(function(error) {
             // The document probably doesn't exist.

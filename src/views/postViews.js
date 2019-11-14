@@ -95,14 +95,14 @@ export const btnpost=(id,index)=>{
    
     btndelete.addEventListener("click",()=>{
         const root = document.getElementById("root");
-    root.innerHTML =
-    `<div class="modalContainerDelete">
+        root.innerHTML =
+     `<div class="modalContainerDelete">
         <div class="modalInfoDelete">
             <h1>¿Seguro que quieres borrar este post?</h1>
             <button id="btnYes" class="btnYes">Si</button>
             <button id="btnNo" class="btnNo">No</button>
         </div>
-    </div>`
+     </div>`
 
     const btnYes = document.getElementById("btnYes");
     btnYes.addEventListener("click", ()=>{
