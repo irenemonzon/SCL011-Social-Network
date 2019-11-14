@@ -68,12 +68,14 @@ export const loginGoogle = () =>{
         var token = result.credential.accessToken;
         var user = result.user;
         initial();
+
     })
     .catch(function(error) {
         var errorCode = error.code;
         var errorMessage = error.message;
         var email = error.email;
         var credential = error.credential;
+        console.log("no entro a google > "+errorMessage);
     });
     
 }
